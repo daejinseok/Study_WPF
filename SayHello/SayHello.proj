@@ -2,28 +2,38 @@
   ToolsVersion="4.0" 
   xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
 
-  <ItemGroup>
-    <Compile Include="*.cs" />
-
-    <LibPath Include="c:\Windows\Microsoft.NET\Framework64\v4.0.30319" />
-    <LibPath Include="c:\Windows\Microsoft.NET\Framework64\v4.0.30319\WPF" />
-
-    <Lib Include="WindowsBase.dll" />
-    <Lib Include="PresentationCore.dll" />
-    <Lib Include="PresentationFramework.dll" />
-    <Lib Include="System.Xaml.dll" />
-
-  </ItemGroup>
+  <PropertyGroup>
+    <Project>SayHello</Project>
+    <LibRoot>c:\Windows\Microsoft.NET\Framework64\v4.0.30319</LibRoot>
+  </PropertyGroup>
 
 
 
   <Target Name="Build">
+    <ItemGroup>
+      <Compile Include=".\**\*.cs" />
+
+      <LibPath Include="$(LibRoot)" />
+      <LibPath Include="$(LibRoot)\WPF" />
+
+      <Lib Include="WindowsBase.dll" />
+      <Lib Include="PresentationCore.dll" />
+      <Lib Include="PresentationFramework.dll" />
+      <Lib Include="System.Xaml.dll" />
+    </ItemGroup>
+    
+    <!-- https://msdn.microsoft.com/en-us/library/s5c8athz.aspx -->
     <Csc Sources="@(Compile)"
       AdditionalLibPaths="@(LibPath)"
       References="@(Lib)"
       TargetType="winexe"
+      OutputAssembly="$(Project).exe"
       />
-     <Exec Command="SayHello.exe"/>
+     <Exec Command="$(Project).exe"/>
+  </Target>
+
+  <Target Name="clean">
+     <Delete Files="$(Project).exe"/>
   </Target>
 
 </Project>
