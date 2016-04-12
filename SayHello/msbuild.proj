@@ -1,0 +1,31 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+
+	<PropertyGroup>
+		<appname>SayHello</appname>
+		<OutputType>winexe</OutputType>
+	</PropertyGroup>	
+
+	<ItemGroup>
+		<Reference Include="$(MSBuildToolsPath)\System.dll" />
+		<Reference Include="$(MSBuildToolsPath)\System.Xaml.dll" />
+		<Reference Include="$(MSBuildToolsPath)\WPF\WindowsBase.dll" />
+		<Reference Include="$(MSBuildToolsPath)\WPF\PresentationCore.dll" />
+		<Reference Include="$(MSBuildToolsPath)\WPF\PresentationFramework.dll" />
+
+		<Compile Include="*.cs" />
+	</ItemGroup>
+
+	<Target Name="Build">
+		<Csc 
+		Sources="@(Compile)"
+		References="@(Reference)"
+		OutputAssembly ="$(appname).exe" />
+
+		<CallTarget Targets="Exec"/>
+	</Target>
+
+ 	<Target Name="Exec">
+        <!-- set security on binaries-->
+        <Exec Command="$(appname).exe"/>
+    </Target>	
+</Project>
