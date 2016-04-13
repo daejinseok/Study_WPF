@@ -20,7 +20,8 @@ namespace Petzold.HandleAnEvent
 		}
 
 		static void WindowOnMouseDown(object sender, MouseButtonEventArgs args){
-			Window win = sender as Window;
+			//Window win = sender as Window;
+			Window win = Application.Current.MainWindow;
 			string strMessage = string.Format(
 				"Window clicked with {0} button at point ({1})", 
 				args.ChangedButton, args.GetPosition(win));

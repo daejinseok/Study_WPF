@@ -1,7 +1,7 @@
 <Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
 
 	<PropertyGroup>
-		<appname>WPF</appname>
+		<appname>wpf</appname>
 		<OutputType>winexe</OutputType>
 	</PropertyGroup>	
 
@@ -19,7 +19,10 @@
 		<Csc 
 		Sources="@(Compile)"
 		References="@(Reference)"
-		OutputAssembly ="$(appname).exe" />
+		OutputAssembly ="$(appname).exe" 
+		TargetType="winexe"
+		/>
+		
 
 		<CallTarget Targets="Exec"/>
 	</Target>
