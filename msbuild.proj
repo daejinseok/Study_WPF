@@ -1,0 +1,15 @@
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">  
+
+    <PropertyGroup>  
+        <AppName>clean</AppName>  
+    </PropertyGroup>  
+
+	<ItemGroup>
+		<DeleteFiles Include="./**/*.exe" />
+	</ItemGroup>
+
+    <Target Name="Build">  
+        <Delete Files="@(DeleteFiles)" />
+    </Target>
+
+</Project>  

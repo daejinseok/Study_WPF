@@ -7,6 +7,7 @@
 
 	<ItemGroup>
 		<Reference Include="$(MSBuildToolsPath)\System.dll" />
+		<Reference Include="$(MSBuildToolsPath)\System.Xaml.dll" />
 		<Reference Include="$(MSBuildToolsPath)\WPF\WindowsBase.dll" />
 		<Reference Include="$(MSBuildToolsPath)\WPF\PresentationCore.dll" />
 		<Reference Include="$(MSBuildToolsPath)\WPF\PresentationFramework.dll" />
