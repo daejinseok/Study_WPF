@@ -1,5 +1,0 @@
-https://msdn.microsoft.com/en-us/library/s5c8athz.aspx?f=255&MSPPError=-2147217396
-
-TargetType="winexe"
-
-로 지정하면, 콘솔창이 뜨지 않는다.
