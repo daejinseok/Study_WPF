@@ -1,6 +1,0 @@
-c:\git\Study_WPF\ch3\ToggleBoldAndItalic\ToggleBoldAndItalic\bin\Debug\ToggleBoldAndItalic.exe
-c:\git\Study_WPF\ch3\ToggleBoldAndItalic\ToggleBoldAndItalic\bin\Debug\ToggleBoldAndItalic.pdb
-c:\git\Study_WPF\ch3\ToggleBoldAndItalic\ToggleBoldAndItalic\obj\Debug\ToggleBoldAndItalic.csprojResolveAssemblyReference.cache
-c:\git\Study_WPF\ch3\ToggleBoldAndItalic\ToggleBoldAndItalic\obj\Debug\ToggleBoldAndItalic.csproj.CoreCompileInputs.cache
-c:\git\Study_WPF\ch3\ToggleBoldAndItalic\ToggleBoldAndItalic\obj\Debug\ToggleBoldAndItalic.exe
-c:\git\Study_WPF\ch3\ToggleBoldAndItalic\ToggleBoldAndItalic\obj\Debug\ToggleBoldAndItalic.pdb
