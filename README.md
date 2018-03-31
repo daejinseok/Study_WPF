@@ -12,3 +12,9 @@ path에 "c:\Windows\Microsoft.NET\Framework64\v4.0.30319"를 추가하고 각 �
 [참고 일주일 만에 WPF!!!](https://brunch.co.kr/@daejin/29)
 
 실제 만들 프로그램도 가능한 Visual Studio 설치 없이 만들어볼 예정이지만, 장단음 못하겠네요. 
+
+
+```sql
+select *
+from twpt01
+```

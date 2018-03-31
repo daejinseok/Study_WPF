@@ -43,9 +43,15 @@ namespace ns
 			txtblk.Inlines.Add(new Bold(new Run("rocket")));
 		}
 
-		void ButtonOnMouseEnter(object sender, MouseEventArgs_args)
+		void ButtonOnMouseEnter(object sender, MouseEventArgs args)
 		{
-			
+			runButton.Foreground = Brushes.Red;
+
+		}
+
+		void ButtonOnMouseLeave(object sender, MouseEventArgs args)
+		{
+			runButton.Foreground = SystemColors.ControlTextBrush;
 		}
 	}
 }
